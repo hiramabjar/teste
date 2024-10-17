@@ -1,0 +1,18 @@
+<div class="toolbar" role="banner">
+  <img src="../../../favicon.ico" class="icone" />
+  <span class="titlepainel">SIGAH - Painel de Atendimento</span>
+</div>
+<form style="margin-top: 85px; margin-left: flex">
+  <mat-form-field appearance="fill" style="width: 100%">
+    <mat-label>Selecione a unidade</mat-label>
+    <mat-select
+      [(ngModel)]="selectedValue"
+      name="unidade"
+      (ngModelChange)="ativarPainel()"
+    >
+      <mat-option *ngFor="let unidade of unidades" [value]="unidade.source">
+        {{ unidade.descricao }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

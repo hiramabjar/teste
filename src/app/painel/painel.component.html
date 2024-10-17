@@ -1,0 +1,174 @@
+<div class="toolbar" role="banner">
+  <div class="col-md-10" style="text-align: center">
+    <img src="../../../favicon.ico" class="icone" />
+    <span class="titlepainel">SIGAH - Painel de Atendimento</span>
+  </div>
+  <div class="col-md-2">
+    <span class="data-hora">{{ today | date : "dd/MM/yyyy HH:mm:ss" }}</span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-9">
+    <div class="content" role="main" style="margin-top: 100px">
+      <mat-card
+        style="padding: 0; height: 140px; margin: 10px 0px 0px 10px"
+        [ngStyle]="{ 'box-shadow': '2px 2px 5px 5px gray' }"
+      >
+        <mat-card-title
+          class="titlecolunaatual"
+          [ngStyle]="{
+            'box-shadow': '2px 2px 5px 5px ' + atendimentoAtual.cor
+          }"
+          style="font-size: 40px; overflow: hidden; text-overflow: ellipsis"
+          >Atual: {{ atual }}</mat-card-title
+        >
+      </mat-card>
+    </div>
+
+    <!-- Conteúdo de publicidade ou vídeo -->
+    <div class="container" *ngIf="!showVideo">
+      <!-- Exibição de publicidade -->
+      <img [src]="currentImage?.url" *ngIf="currentImage" />
+    </div>
+
+    <!-- Exibição de vídeo HLS -->
+    <div *ngIf="showVideo" style="width: 100%; text-align: center;">
+      <video
+        id="my-player"
+        class="video-js vjs-default-skin"
+        controls
+        autoplay
+        muted
+        preload="auto"
+        width="640"
+        height="360"
+        data-setup='{}'>
+        <source src="https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6102e04e9ab1db0007a980a1livestitch/master.m3u8?advertisingId={PSID}&appVersion=unknown&deviceDNT={TARGETOPT}&deviceId={PSID}&deviceLat=0&deviceLon=0&deviceMake=samsung&deviceModel=samsung&deviceType=samsung-tvplus&deviceVersion=unknown" type="application/x-mpegURL">
+      </video>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="content" role="main" style="margin-top: 100px">
+      <mat-card
+        style="
+          padding: 0;
+          height: 140px;
+          margin: 0px 10px 10px 0px;
+          box-shadow: 2px 2px 5px 5px gray;
+        "
+      >
+        <mat-card-title class="titlecoluna"
+          >Últimos Atendimentos</mat-card-title
+        >
+      </mat-card>
+    </div>
+    <div class="content" role="main" style="margin-top: 15px">
+      <mat-card
+        style="
+          height: 150px;
+          margin: 0px 10px 10px 0px;
+          white-space: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0%;
+        "
+        [ngStyle]="{
+          'box-shadow': '2px 2px 5px 5px ' + atendimentoAnterior1.cor
+        }"
+      >
+        <mat-card-title class="title">{{
+          atendimentoAnterior1.local
+        }}</mat-card-title>
+        <mat-card-subtitle class="subtitle">{{
+          atendimentoAnterior1.paciente
+        }}</mat-card-subtitle>
+      </mat-card>
+
+      <mat-card
+        style="
+          height: 150px;
+          margin: 0px 10px 10px 0px;
+          white-space: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0%;
+        "
+        [ngStyle]="{
+          'box-shadow': '2px 2px 5px 5px ' + atendimentoAnterior2.cor
+        }"
+      >
+        <mat-card-title class="title">{{
+          atendimentoAnterior2.local
+        }}</mat-card-title>
+        <mat-card-subtitle class="subtitle">{{
+          atendimentoAnterior2.paciente
+        }}</mat-card-subtitle>
+      </mat-card>
+
+      <mat-card
+        style="
+          height: 150px;
+          margin: 0px 10px 10px 0px;
+          white-space: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0%;
+        "
+        [ngStyle]="{
+          'box-shadow': '2px 2px 5px 5px ' + atendimentoAnterior3.cor
+        }"
+      >
+        <mat-card-title class="title">{{
+          atendimentoAnterior3.local
+        }}</mat-card-title>
+        <mat-card-subtitle class="subtitle">{{
+          atendimentoAnterior3.paciente
+        }}</mat-card-subtitle>
+      </mat-card>
+
+      <mat-card
+        style="
+          height: 150px;
+          margin: 0px 10px 10px 0px;
+          white-space: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0%;
+        "
+        [ngStyle]="{
+          'box-shadow': '2px 2px 5px 5px ' + atendimentoAnterior4.cor
+        }"
+      >
+        <mat-card-title class="title">{{
+          atendimentoAnterior4.local
+        }}</mat-card-title>
+        <mat-card-subtitle class="subtitle">{{
+          atendimentoAnterior4.paciente
+        }}</mat-card-subtitle>
+      </mat-card>
+
+      <mat-card
+        style="
+          height: 150px;
+          margin: 0px 10px 10px 0px;
+          white-space: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0%;
+        "
+        [ngStyle]="{
+          'box-shadow': '2px 2px 5px 5px ' + atendimentoAnterior5.cor
+        }"
+      >
+        <mat-card-title class="title">{{
+          atendimentoAnterior5.local
+        }}</mat-card-title>
+        <mat-card-subtitle class="subtitle">{{
+          atendimentoAnterior5.paciente
+        }}</mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,140 @@
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  background-color: #0072a3;
+  color: white;
+  font-weight: 600;
+}
+
+.icone{
+  padding-left: 1px;
+  padding-right: 10px;
+}
+
+.titlepainel {
+  font-size: 50px;
+  margin: auto;
+}
+
+.titlecoluna {
+  font-size: 40px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  align-items: center;
+  background-color: lightgray;
+  font-weight: 500;
+  text-align: center;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.titlecolunaatual {
+  font-size: 50px !important;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  align-items: center;
+  background-color: white;
+  font-weight: 600;
+  text-align: center;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content {
+  padding: 0 !important;
+}
+
+.data-hora {
+  font-size: 30px;
+  margin: 0px 20px 0px 0px;
+  padding: 0px;
+}
+
+.title {
+  font-size: 40px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+
+.subtitle {
+  font-size: 30px;
+  padding: 2px;
+  font-weight: bold;
+  margin-left: 0px;
+}
+
+.title-atual {
+  font-size: 120px;
+  margin: auto;
+}
+
+.subtitle-atual {
+  font-size: 70px;
+  padding: 25px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.card-atual{
+  height: 790px;
+}
+
+@media (max-width: 1280px) {
+  .card-atual{
+    height: 490px;
+  }
+  .title-atual {
+    font-size: 80px;
+  }
+  .subtitle-atual {
+    font-size: 50px;
+    padding: 15px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  .data-hora {
+    font-size: 25px;
+    margin: 0px 20px 0px 0px;
+    padding: 0px;
+  }
+  .titlecoluna{
+    font-size: 40px;
+    background-color: white;
+  }
+}
+
+.imgpublicidade {
+  position: fixed; /* Fixa a imagem na tela */
+  top: 0;
+  left: 0;
+  margin: 0px;
+  width: 100%; /* Garante que a largura da imagem seja igual à largura da tela */
+  height: 100%; /* Garante que a altura da imagem seja igual à altura da tela */
+  object-fit: cover; /* Redimensiona a imagem para cobrir toda a área do contêiner */
+  z-index: -1; /* Coloca a imagem atrás de outros elementos, como o conteúdo da página */
+}
+
+.container {
+  width: 100vw; /* largura da viewport */
+  height: 100vh; /* altura da viewport */
+  overflow: hidden; /* para esconder qualquer parte da imagem que ultrapasse a div */
+}
+
+.container img {
+  width: 100%; /* ajusta a largura da imagem para preencher a largura da div */
+  height: 75%; /* ajusta a altura da imagem para preencher a altura da div */
+  object-fit: contain; /* garante que a imagem preencha todo o espaço disponível */
+}

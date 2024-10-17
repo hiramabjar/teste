@@ -1,0 +1,33 @@
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #0072a3;
+  color: white;
+  font-weight: 600;
+}
+
+.icone{
+  padding-left: 1px;
+  padding-right: 10px;
+}
+
+.titlepainel {
+  font-size: 64px;
+  margin: auto;
+}
+
+.title {
+  font-size: 48px;
+}
+
+.subtitle {
+  font-size: 48px;
+  padding: 25px;
+  font-weight: bold;
+  margin-left: 50px;
+}
